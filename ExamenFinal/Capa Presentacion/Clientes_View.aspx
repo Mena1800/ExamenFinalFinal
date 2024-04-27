@@ -58,21 +58,27 @@
 <body>
     <form id="form1" runat="server">
          <h1>Gestión de Clientes</h1>
+         <p>&nbsp;</p>
+         <p>
+             <asp:GridView ID="GridView1" runat="server">
+             </asp:GridView>
+         </p>
+         <p>&nbsp;</p>
 
     <form id="formAgregarCliente" onsubmit="agregarCliente(); return false;">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br>
+        <input type="text" id="txtnombrecli" name="nombre" required><br>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+        <input type="email" id="txtemailcli" name="email" required><br>
         <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required><br>
-        <button type="submit">Agregar Cliente</button>
+        <input type="tel" id="txttelefonocli" name="telefono" required><br>
+        <button type="submit" id="btnGuardarclient">Agregar Cliente</button>
     </form>
 
     <form id="formBorrarCliente" onsubmit="borrarCliente(); return false;">
         <label for="idBorrar">ID del Cliente:</label>
         <input type="number" id="idBorrar" name="idBorrar" required><br>
-        <button type="submit">Borrar Cliente</button>
+        <button type="submit" id="Bdeleteclient">Borrar Cliente</button>
     </form>
 
     <form id="formModificarCliente" onsubmit="modificarCliente(); return false;">
@@ -84,7 +90,7 @@
         <input type="email" id="emailModificar" name="emailModificar"><br>
         <label for="telefonoModificar">Nuevo Teléfono:</label>
         <input type="tel" id="telefonoModificar" name="telefonoModificar"><br>
-        <button type="submit">Modificar Cliente</button>
+        <button type="submit" id="Bmodifclient">Modificar Cliente</button>
     </form>
 
     <script>
@@ -118,6 +124,6 @@
             var nombre = document.getElementById("nombreModificar").value;
             var email = document.getElementById("emailModificar").value;
             var telefono = document.getElementById("telefonoModificar").value;
-    </form>
-</body>
-</html>
+    </form >
+</body >
+</html >

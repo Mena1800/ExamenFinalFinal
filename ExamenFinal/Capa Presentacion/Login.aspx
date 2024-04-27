@@ -59,6 +59,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="form-group">
+                        <asp:Label ID="lblMensaje" runat="server" ForeColor="Red" EnableViewState="false"></asp:Label><br />
                 <label for="username">Usuario:</label>
                 <input type="text" id="username" name="username" required>
             </div>

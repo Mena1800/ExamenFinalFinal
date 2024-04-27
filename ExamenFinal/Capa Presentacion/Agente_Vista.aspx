@@ -58,33 +58,30 @@
 <body>
     <form id="form1" runat="server">
         <h1>Gestión de Agentes</h1>
+        <p>&nbsp;</p>
+        <p>
+            <asp:GridView ID="GridView1" runat="server">
+            </asp:GridView>
+        </p>
 
     <form id="formAgregarAgente" onsubmit="agregarAgente(); return false;">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" required><br>
-        <button type="submit">Agregar Agente</button>
+        <input type="text" id="txtnombre" name="nombre" required>&nbsp; <br>
+        <button type="submit" id="btnGuardar">Agregar Agente</button>
     </form>
 
     <form id="formBorrarAgente" onsubmit="borrarAgente(); return false;">
         <label for="idBorrar">ID del Agente:</label>
-        <input type="number" id="idBorrar" name="idBorrar" required><br>
-        <button type="submit">Borrar Agente</button>
+        <input type="number" id="txtIDAgent" name="idBorrar" required><br>
+        <button type="submit" id="Bdelete">Borrar Agente</button>
     </form>
 
     <form id="formModificarAgente" onsubmit="modificarAgente(); return false;">
         <label for="idModificar">ID del Agente:</label>
-        <input type="number" id="idModificar" name="idModificar" required><br>
+        <input type="number" id="txtIDAgentnu" name="idModificar" required><br>
         <label for="nombreModificar">Nuevo Nombre:</label>
-        <input type="text" id="nombreModificar" name="nombreModificar"><br>
-        <label for="emailModificar">Nuevo Email:</label>
-        <input type="email" id="emailModificar" name="emailModificar"><br>
-        <label for="telefonoModificar">Nuevo Teléfono:</label>
-        <input type="tel" id="telefonoModificar" name="telefonoModificar"><br>
-        <button type="submit">Modificar Agente</button>
+        <input type="tel" id="txtNomagente" name="telefonoModificar"><br>
+        <button type="submit" id="Bmodif">Modificar Agente</button>
     </form>
 
     <script>
@@ -132,3 +129,4 @@
     </form>
 </body>
 </html>
+
